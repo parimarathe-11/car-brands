@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cars</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo-title">
+      <img src="images/f1.png" alt="Logo" id="logo">
+      <h1>Cars</h1>
+    </div>
+    <button onclick="toggleDarkMode()" id="darkModeBtn">🌙 Dark Mode</button>
+  </header>
+
+  <section id="controls">
+    <input type="text" id="searchBar" onkeyup="filterBrands()" placeholder="Search brands...">
+  </section>
+
+  <section id="brandButtons">
+    <button onclick="showInfo('lamborghini')">Lamborghini</button>
+    <button onclick="showInfo('ferrari')">Ferrari</button>
+    <button onclick="showInfo('tesla')">Tesla</button>
+    <button onclick="showInfo('bugatti')">Bugatti</button>
+    <button onclick="showInfo('porsche')">Porsche</button>
+  </section>
+
+  <section id="info-box" class="hidden">
+    <h2 id="brand-name"></h2>
+    <img id="brand-img" src="" alt="Brand Image">
+    <p id="brand-info"></p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

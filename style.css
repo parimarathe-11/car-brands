@@ -1,0 +1,143 @@
+/* General Styling */
+body {
+  font-family: 'Orbitron', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #f1f1f1;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a, #2c3e50);
+  background-size: 400% 400%;
+  animation: gradientFlow 15s ease infinite;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(30, 30, 30, 0.8);
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#logo {
+  height: 50px;
+  width: auto;
+  border-radius: 8px;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  color: #c0c0c0;
+}
+
+#darkModeBtn {
+  background-color:#c0c0c0;
+  color: black;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#darkModeBtn:hover {
+  background-color: #39FF14;
+  color: black;
+}
+
+/* Search bar */
+#controls {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#searchBar {
+  padding: 10px;
+  width: 50%;
+  border: 1px solid#c0c0c0;
+  background-color: #1e1e1e;
+  color: #00FFFF;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Buttons for brands */
+#brandButtons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+}
+
+#brandButtons button {
+  background-color: #1a1a1a;
+  color: #c0c0c0;
+  padding: 12px 20px;
+  border: 2px solid #c0c0c0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+#brandButtons button:hover {
+  background-color:#c0c0c0;
+  color: #000;
+}
+
+/* Info box styling */
+#info-box {
+  max-width: 800px;
+  margin: 30px auto;
+  background-color: #1e1e1e;
+  padding: 25px;
+  border-left: 6px solid#c0c0c0;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+#info-box img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #searchBar {
+    width: 80%;
+  }
+
+  #brandButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-title {
+    flex-direction: column;
+    align-items: center;
+  }
+}
